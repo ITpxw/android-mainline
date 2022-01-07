@@ -30,3 +30,8 @@ subdir-y += synaptics
 subdir-y += ti
 subdir-y += toshiba
 subdir-y += xilinx
+
+vendor := $(dtstree)/vendor
+ifneq "$(wildcard $(vendor)/Makefile)" ""
+        subdir-y += vendor
+endif
